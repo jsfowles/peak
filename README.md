@@ -1,4 +1,4 @@
-# Monstro Next
+# Belly Next
 
 Easily set up a Next project. 
 
