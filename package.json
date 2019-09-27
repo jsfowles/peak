@@ -7,6 +7,9 @@
     "start": "next start"
   },
   "dependencies": {
+    "@apollo/react-hooks": "^3.1.1",
+    "apollo-boost": "^0.4.4",
+    "graphql": "^14.5.8",
     "next": "^9.0.6",
     "next-build-id": "^3.0.0",
     "next-routes": "^1.4.2",
