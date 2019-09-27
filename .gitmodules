@@ -1,0 +1,3 @@
+[submodule "src/belly"]
+	path = src/belly
+	url = https://github.com/underbelly/belly
