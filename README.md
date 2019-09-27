@@ -7,3 +7,6 @@ next, from the command line.
 
 
 The command will be `monstro init <project_name>` monstro init defaults to building a next project
+
+
+This section is maintained by `Matt Howa` 
