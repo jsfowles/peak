@@ -4,7 +4,7 @@ import { ApolloProvider } from '@apollo/react-hooks';
 
 import { client } from './apolloClients';
 
-let apolloClient = null;
+let apolloClient: any = null;
 
 const initApolloClient = (initialState: any = {}) => {
   if (typeof window === 'undefined') {
@@ -18,8 +18,8 @@ const initApolloClient = (initialState: any = {}) => {
   return apolloClient;
 };
 
-export const withApollo = (PageComponent, { ssr = true } = {}) => {
-  const WithApollo = ({ apolloClient, apolloState, ...pageProps }) => {
+export const withApollo = (PageComponent: any, { ssr = true } = {}) => {
+  const WithApollo = ({ apolloClient, apolloState, ...pageProps }: any) => {
     const client = React.useMemo(
       () => apolloClient || initApolloClient(apolloState),
       [],
@@ -43,7 +43,7 @@ export const withApollo = (PageComponent, { ssr = true } = {}) => {
   }
 
   if (ssr || PageComponent.getInitialProps) {
-    WithApollo.getInitialProps = async ctx => {
+    WithApollo.getInitialProps = async (ctx: any) => {
       const { AppTree } = ctx;
       const apolloClient = (ctx.apolloClient = initApolloClient());
       let pageProps = {};
