@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Document, { Head, Main, NextScript } from 'next/document';
+import Manifest from 'next-manifest/manifest'
 
 export default class extends Document {
   static async getInitialProps(ctx) {
@@ -8,19 +9,16 @@ export default class extends Document {
   }
 
   render() {
-    const config = {
-      nonce : Math.random(),
-      crossOrigin : false
-    };
-
     return (
       <html lang="en">
         <Head>
           <meta charSet="utf-8" />
-          <meta
-            name="viewport"
-            content="initial-scale=1.0, width=device-width"
+          <Manifest
+              href='/static/manifest/manifest.json'
+              themeColor='#F0F0F0'
+              initialScale='1'
           />
+
           <link
             rel="shortcut icon"
             href="/static/favicon.ico"
