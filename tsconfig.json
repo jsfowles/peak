@@ -14,17 +14,32 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
-    "typeRoots": ["node_modules/@types"],
+    "types": ["react", "jest"],
     "lib": ["es2018", "dom"],
     "allowJs": true,
     "skipLibCheck": false,
     "allowSyntheticDefaultImports": true,
-    "strict": true,
+    "strict": false,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true
+    "noEmit": true,
+    "baseUrl": "./",
+    "paths": {
+      "@pages/*": ["pages/*"],
+      "@components/*": ["src/components/*"],
+      "@containers/*": ["src/containers/*"],
+      "@identity/*": ["src/identity/*"],
+      "@lib/*": ["src/lib/*"],
+      "@patterns/*": ["src/patterns/*"],
+      "@views/*": ["src/views/*"]
+    }
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "src/**/*.spec.ts"]
+  "include": [
+    "types/**/*",
+    "src/**/*",
+    "pages/**/*",
+    "test/**/*",
+    "apollo/**/*"
+  ]
 }

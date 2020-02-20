@@ -1,23 +1,42 @@
-import App, { Container } from 'next/app'
-import Head from 'next/head'
 import * as React from 'react';
+import App from 'next/app';
+import Head from 'next/head';
 
+import { motion, AnimatePresence } from 'framer-motion';
+import { ThemeProvider } from 'styled-components';
 
-class ProjectRoot extends App {
-  // TODO figure out why not having this causes an error
-  private props: any;
+import Layout from '@components/Layout';
+import * as theme from '@identity/index';
 
+class MyApp extends App {
   render() {
-    const { Component, pageProps } = this.props;
+    const { Component, pageProps, router } = this.props;
+    const DynamicLayout = Component.Layout || Layout;
+
     return (
+      <ThemeProvider theme={theme}>
         <>
           <Head>
-            <title>New Project</title>
+            <title>Degreed</title>
+            <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
           </Head>
-        <Component {...pageProps} />
+
+          <DynamicLayout>
+            <AnimatePresence exitBeforeEnter>
+              <motion.main
+                key={router.route}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+              >
+                <Component {...pageProps} key={router.route} />
+              </motion.main>
+            </AnimatePresence>
+          </DynamicLayout>
         </>
-    )
+      </ThemeProvider>
+    );
   }
 }
 
-export default ProjectRoot;
+export default MyApp;
