@@ -11,7 +11,7 @@ import * as theme from '@identity/index';
 class MyApp extends App {
   render() {
     const { Component, pageProps, router } = this.props;
-
+    console.log(router.route);
     return (
       <ThemeProvider theme={theme}>
         <>
@@ -27,6 +27,9 @@ class MyApp extends App {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
+                style={{
+                  background: router.route === '/' ? '#e9f7fe' : '#e9fefb',
+                }}
               >
                 <Component {...pageProps} key={router.route} />
               </motion.main>
