@@ -1,7 +1,7 @@
 import { remCalc } from '../lib/helperMethods';
 import * as c from './constants';
 import { mergeObjectify, objectify } from '../lib/arrays';
-import { ObjectMap } from '../types/helper';
+import { ObjectMap } from './type';
 import { breakpoints } from './breakpoints';
 
 export const splitValue = (value: string): Array<Array<string>> =>

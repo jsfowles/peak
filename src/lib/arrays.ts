@@ -1,5 +1,5 @@
 import merge from 'lodash/merge';
-import { ObjectMap } from '../types/helper';
+import { ObjectMap } from '@identity/type';
 
 export const objectify = <T, U>(
   arr: Array<T>,

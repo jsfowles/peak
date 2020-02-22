@@ -1,6 +1,4 @@
-import { DefaultTheme } from 'styled-components';
-
-export const colors: DefaultTheme['colors'] = {
+export const colors = {
   primaryLight: '#35caef',
   primary: '#00b5e2',
   primaryDark: '#0098be',
@@ -30,7 +28,7 @@ export const colors: DefaultTheme['colors'] = {
   white: '#ffffff',
 };
 
-export const uiColors: DefaultTheme['uiColors'] = {
+export const uiColors = {
   fontColorBase: colors.black01,
 
   linkColor: colors.primaryDark,

@@ -1,8 +1,9 @@
-import styled, { DefaultTheme } from 'styled-components';
+import styled from 'styled-components';
 
 import { typeScale } from './typeScale';
 import { SpacingSetting } from './spacing';
 import { remCalc } from '../lib/helperMethods';
+import { colors } from './';
 
 interface Scale {
   [el: string]: {
@@ -10,12 +11,17 @@ interface Scale {
   };
 }
 
+export interface ObjectMap<T> {
+  [key: string]: T;
+}
+
+export type Update<T> = T | ((current: T) => T);
+
 interface Props {
-  fontColor: keyof DefaultTheme['colors'];
+  fontColor: keyof typeof colors;
   fontWeight: number;
   lineHeight: number;
   space: SpacingSetting;
-  // measure: keyof MeasureType,
   disableMeasure: boolean;
   textAlign: 'left' | 'center' | 'right';
   uppercase: 'uppercase';

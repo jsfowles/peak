@@ -11,7 +11,6 @@ import * as theme from '@identity/index';
 class MyApp extends App {
   render() {
     const { Component, pageProps, router } = this.props;
-    const DynamicLayout = Component.Layout || Layout;
 
     return (
       <ThemeProvider theme={theme}>
@@ -21,7 +20,7 @@ class MyApp extends App {
             <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
           </Head>
 
-          <DynamicLayout>
+          <Layout>
             <AnimatePresence exitBeforeEnter>
               <motion.main
                 key={router.route}
@@ -32,7 +31,7 @@ class MyApp extends App {
                 <Component {...pageProps} key={router.route} />
               </motion.main>
             </AnimatePresence>
-          </DynamicLayout>
+          </Layout>
         </>
       </ThemeProvider>
     );

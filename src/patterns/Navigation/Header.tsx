@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header style={{ borderBottom: '1px solid gray' }}>
       <Container space={{ padding: 'vertical-md' }}>
-        <Row>
+        <Row justifyContent="space-between">
           <Logo />
           <NavItems />
         </Row>
