@@ -4,7 +4,7 @@ import { Container, Row } from '@identity/grid';
 const Home = () => (
   <Container space={{ padding: 'vertical-xl' }}>
     <Row flexDirection="column">
-      <h1 style={{ fontSize: 72 }}>Index Page</h1>
+      <h1 style={{ fontSize: 72 }}>Home Page</h1>
       <p style={{ paddingTop: 40 }}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
         pellentesque sollicitudin sem sed placerat. Pellentesque habitant morbi
