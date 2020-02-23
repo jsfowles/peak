@@ -55,10 +55,12 @@ export const GlobalStyles = createGlobalStyle`
 
   header {
     flex-shrink:0;
+    z-index: 1000;
   }
-  
+
   footer {
     flex-shrink: 0;
+    z-index: 1000;
   }
 
   body {
