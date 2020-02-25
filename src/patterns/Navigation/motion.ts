@@ -35,14 +35,13 @@ export const navMotion = {
     opacity: 1,
     transition: {
       ease: [0.23, 1, 0.32, 1],
-      delayChildren: 0,
-      staggerChildren: 0.05,
+      staggerChildren: 0.1,
     },
   },
 };
 
 export const navItemMotion = {
-  hidden: { y: '-100%' },
+  hidden: { y: '-100vh' },
   visible: {
     y: 0,
     transition: {
