@@ -1,54 +1,44 @@
-export const colors = {
-  primaryLight: '#35caef',
-  primary: '#00b5e2',
-  primaryDark: '#0098be',
+import { css } from 'styled-components';
 
-  secondaryLight: '#4ac7c1',
-  secondary: '#00b2a9',
-  secondaryDark: '#03a39c',
+export const colors = css`
+  --primary-light: #35caef;
+  --primary: #00b5e2;
+  --primary-dark: #0098be;
 
-  warningLight: '#ff985d',
-  warning: '#ff8038',
-  warningDark: '#ea6d27',
+  --secondary-light: #4ac7c1;
+  --secondary-: #00b2a9;
+  --secondary-dark: #03a39c;
 
-  errorLight: '#e80e41',
-  error: '#d50032',
-  errorDark: '#c20431',
+  --warning-light: #ff985d;
+  --warning-: #ff8038;
+  --warning-dark: #ea6d27;
 
-  black01: '#1d252d',
-  black02: '#333f48',
-  black03: '#5b6770',
-  black04: '#7c878e',
-  black05: '#8d96a0',
-  black06: '#bbc5cf',
-  black07: '#cdd7e1',
-  black08: '#d9e1e9',
-  black09: '#f3f7fa',
+  --error-light: #e80e41;
+  --error-: #d50032;
+  --error-dark: #c20431;
 
-  white: '#ffffff',
-};
+  --black01: #1d252d;
+  --black02: #333f48;
+  --black03: #5b6770;
+  --black04: #7c878e;
+  --black05: #8d96a0;
+  --black06: #bbc5cf;
+  --black07: #cdd7e1;
+  --black08: #d9e1e9;
+  --black09: #f3f7fa;
 
-export const uiColors = {
-  fontColorBase: colors.black01,
+  --white: #ffffff;
+`;
 
-  linkColor: colors.primaryDark,
-  linkColorHover: colors.primaryLight,
-  linkColorFocus: colors.primaryLight,
+export const uiColors = css`
+  --font-color-base: var(--black01);
 
-  mediaLoadingBackground: colors.black09,
+  --link-color: var(--primary-dark);
+  --link-color-hover: var(--primary-light);
+  --link-color-focus: var(--primary-light);
 
-  blockquote: colors.black09,
-};
+  --media-loading-background: var(--black09);
 
-export const uiColorsCSS = `
-  --font-color-base: ${colors.black01};
-
-  --link-color: ${colors.primaryDark};
-  --link-color-hover: ${colors.primaryLight};
-  --link-color-focus: ${colors.primaryLight};
-
-  --media-loading-background: ${colors.black09};
-
-  --blockquote: ${colors.black09};
-  --border-color: ${colors.black08};
+  --blockquote: var(--black09);
+  --border-color: var(--black08);
 `;

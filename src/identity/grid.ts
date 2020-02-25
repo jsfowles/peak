@@ -8,10 +8,10 @@ export interface ContainerProps {
 
 export const Container = styled.section<ContainerProps>(
   props => props.space && props.theme.spacing(props.space),
-  props => `
+  `
     margin: 0 auto;
     position: relative;
-    max-width: ${props.theme.constants.maxWidth}px;
+    max-width: var(--max-width);
   `,
 );
 
@@ -33,12 +33,13 @@ export const Row = styled.div<RowProps>(
     flex-direction: ${props.flexDirection ? props.flexDirection : 'column'};
     display: flex;
     padding: 0 7vw;
-    max-width: ${props.theme.constants.maxWidth}px;
+    max-width: var(--max-width);
+
     ${props.theme.breakpoints.TABLET} {
       flex-direction: ${props.flexDirection ? props.flexDirection : 'initial'};
     }
     ${props.theme.breakpoints.DESKTOP} {
-      width: ${100 - props.theme.constants.pageSpacing * 2}vw;
+      width: 100 - var(--page-spacing) * 2vw;
       padding: 0;
     }
   `,

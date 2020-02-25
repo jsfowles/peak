@@ -1,12 +1,14 @@
-export const constants = {
-  animationTiming: 'cubic-bezier(0.23, 1, 0.32, 1)',
-  animationDurationLong: 500,
-  animationDurationShort: 500,
-  pageSpacing: 7,
-  navHeight: 64,
-  maxWidth: 1024,
-  boxShadow: '0 0 15px rgba(0, 0, 0, 0.3)',
-};
+import { css } from 'styled-components';
+
+export const constants = css`
+  --animation-timing: cubic-bezier(0.23, 1, 0.32, 1);
+  --animation-duration-xl: 750;
+  --animation-duration-l: 500;
+  --animation-duration-m: 250;
+  --animation-duration-s: 100;
+  --max-width: 1024px;
+  --box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 10px;
+`;
 
 /*
  * Spacing:

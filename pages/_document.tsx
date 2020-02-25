@@ -47,10 +47,10 @@ export default class MyDocument extends Document {
           <GlobalStyles />
         </Head>
 
-        <bodystat>
+        <body>
           <Main />
           <NextScript />
-        </bodystat>
+        </body>
       </html>
     );
   }

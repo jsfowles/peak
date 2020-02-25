@@ -1,47 +1,40 @@
 import React from 'react';
 
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Container, Row } from '@identity/grid';
 import { NavItems } from '@patterns/Navigation';
 import Logo from '@components/Logo';
 
+import { headerMotion, logoMotion } from './motion';
+
 const Header = () => {
   return (
-    <AnimatePresence>
-      <motion.header
-        transition={{
-          type: 'spring',
-          damping: 50,
-          stiffness: 250,
-          staggerChildren: 0.25,
-          when: 'beforeChildren',
-        }}
-        initial={{ y: '-100%' }}
-        animate={{ y: 0 }}
-        exit={{ y: 0 }}
-        style={{
-          background: '#ffffff',
-          boxShadow: 'rgba(0, 0, 0, 0.3) 0px 0px 10px',
-        }}
-      >
-        <motion.div
-          initial={{ y: -20 }}
-          animate={{ y: 0 }}
-          transition={{
-            delay: 0.25,
-            damping: 50,
-            stiffness: 250,
-          }}
-        >
-          <Container space={{ padding: 'vertical-md' }}>
-            <Row justifyContent="space-between">
-              <Logo />
-              <NavItems />
-            </Row>
-          </Container>
-        </motion.div>
-      </motion.header>
-    </AnimatePresence>
+    <motion.header
+      variants={headerMotion}
+      initial="hidden"
+      animate="visible"
+      style={{
+        background: '#ffffff',
+        boxShadow: 'var(--box-shadow)',
+      }}
+    >
+      <Container space={{ padding: 'vertical-md' }}>
+        <Row justifyContent="space-between">
+          <motion.div
+            variants={{ ...logoMotion }}
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              width: '100%',
+              justifyContent: 'space-between',
+            }}
+          >
+            <Logo />
+            <NavItems />
+          </motion.div>
+        </Row>
+      </Container>
+    </motion.header>
   );
 };
 

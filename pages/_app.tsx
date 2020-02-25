@@ -8,6 +8,8 @@ import { ThemeProvider } from 'styled-components';
 import Layout from '@components/Layout';
 import * as theme from '@identity/index';
 
+import { mainMotion } from '@identity/motion';
+
 class MyApp extends App {
   render() {
     const { Component, pageProps, router } = this.props;
@@ -22,23 +24,7 @@ class MyApp extends App {
 
           <Layout>
             <AnimatePresence exitBeforeEnter>
-              <motion.main
-                transition={{
-                  duration: 0.25,
-                  delay: 0.1,
-                  damping: 50,
-                  stiffness: 250,
-                }}
-                key={router.route}
-                initial={{ opacity: 0, scale: 0.98 }}
-                animate={{ opacity: 1, scale: 1.0 }}
-                exit={{ opacity: 0, scale: 0.98 }}
-                style={
-                  {
-                    // background: router.route === '/' ? '#e9f7fe' : '#e9fefb',
-                  }
-                }
-              >
+              <motion.main {...mainMotion} key={router.route}>
                 <Component {...pageProps} key={router.route} />
               </motion.main>
             </AnimatePresence>

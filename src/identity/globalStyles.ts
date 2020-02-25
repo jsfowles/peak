@@ -1,10 +1,13 @@
 import { createGlobalStyle } from 'styled-components';
 
-import { uiColorsCSS } from './colors';
+import { constants } from './constants';
+import { uiColors, colors } from './colors';
 
 export const GlobalStyles = createGlobalStyle`
   :root {
-    ${uiColorsCSS}
+    ${uiColors}
+    ${colors}
+    ${constants}
   }
 
   #__next {
