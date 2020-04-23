@@ -18,8 +18,8 @@ class MyApp extends App {
       <ThemeProvider theme={theme}>
         <>
           <Head>
-            <title>Degreed</title>
-            <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+            <title>The Peak</title>
+            <link rel="shortcut icon" type="image/x-icon" />
           </Head>
 
           <Layout>
