@@ -3,7 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Container, Row } from '@identity/grid';
 import { NavItems } from '@patterns/Navigation';
-import Logo from '@components/Logo';
+// import Logo from '@components/Logo';
 
 import { headerMotion, logoMotion } from './motion';
 
@@ -29,7 +29,7 @@ const Header = () => {
               justifyContent: 'space-between',
             }}
           >
-            <Logo />
+            <div>THE PEAK</div>
             <NavItems />
           </motion.div>
         </Row>

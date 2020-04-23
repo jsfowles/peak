@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Container, Row } from '@identity/grid';
-import Logo from '@components/Logo';
+// import Logo from '@components/Logo';
 import { footerMotion, logoMotion } from './motion';
 
 const Footer = () => {
@@ -18,7 +18,7 @@ const Footer = () => {
       <Container space={{ padding: 'vertical-md' }}>
         <Row>
           <motion.div variants={{ ...logoMotion }}>
-            <Logo />
+            <div>THE PEAK</div>
           </motion.div>
         </Row>
       </Container>
